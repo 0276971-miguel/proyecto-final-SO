@@ -1,0 +1,11 @@
+.git
+.gitignore
+.DS_Store
+__MACOSX
+*.o
+build/
+logs/*.log
+syscall-sentinel
+test_programs/safe_program
+test_programs/suspicious_program
+test_programs/fork_bomb_demo

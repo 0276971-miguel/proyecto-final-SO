@@ -1,0 +1,11 @@
+services:
+  syscall-sentinel:
+    build: .
+    image: syscall-sentinel:latest
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp=unconfined
+    volumes:
+      - ./logs:/app/logs
+    command: ["./syscall-sentinel", "./test_programs/suspicious_program"]
